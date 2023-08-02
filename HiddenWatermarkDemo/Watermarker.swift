@@ -8,17 +8,6 @@
 import SwiftUI
 import UniformTypeIdentifiers
 
-#if canImport(UIKit)
-typealias PlatformImage = UIImage
-#elseif canImport(AppKit)
-typealias PlatformImage = NSImage
-extension NSImage {
-    var cgImage: CGImage? {
-        cgImage(forProposedRect: nil, context: nil, hints: nil)
-    }
-}
-#endif
-
 enum Watermarker {
     
     // - MARK: - Watermark Image & Return `CGImage`
@@ -99,6 +88,7 @@ enum Watermarker {
     }
 }
 
+// - MARK: Internals
 
 extension Watermarker {
     private static func _watermark(cgImage: CGImage, text: String, progress: ((Double) -> Void)?) async -> CGImage? {

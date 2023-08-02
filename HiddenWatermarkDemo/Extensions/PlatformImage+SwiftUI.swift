@@ -16,3 +16,14 @@ extension Image {
         #endif
     }
 }
+
+#if canImport(UIKit)
+typealias PlatformImage = UIImage
+#elseif canImport(AppKit)
+typealias PlatformImage = NSImage
+extension NSImage {
+    var cgImage: CGImage? {
+        cgImage(forProposedRect: nil, context: nil, hints: nil)
+    }
+}
+#endif
