@@ -11,6 +11,12 @@
 		3886E8A22A7A368200AB1760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3886E8A12A7A368200AB1760 /* ContentView.swift */; };
 		3886E8A42A7A368600AB1760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3886E8A32A7A368600AB1760 /* Assets.xcassets */; };
 		3886E8A82A7A368600AB1760 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3886E8A72A7A368600AB1760 /* Preview Assets.xcassets */; };
+		3886E8B02A7A36B400AB1760 /* Data+Bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3886E8AE2A7A36B400AB1760 /* Data+Bit.swift */; };
+		3886E8B12A7A36B400AB1760 /* BitReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3886E8AF2A7A36B400AB1760 /* BitReader.swift */; };
+		3886E8B42A7A370900AB1760 /* Watermarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3886E8B32A7A370900AB1760 /* Watermarker.swift */; };
+		3886E8B62A7A393400AB1760 /* PlatformImage+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3886E8B52A7A393400AB1760 /* PlatformImage+SwiftUI.swift */; };
+		3886E8B92A7A496C00AB1760 /* String+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3886E8B82A7A496C00AB1760 /* String+Identifiable.swift */; };
+		3886E8BB2A7A7AC900AB1760 /* BitLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3886E8BA2A7A7AC900AB1760 /* BitLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		3886E8A32A7A368600AB1760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3886E8A52A7A368600AB1760 /* HiddenWatermarkDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HiddenWatermarkDemo.entitlements; sourceTree = "<group>"; };
 		3886E8A72A7A368600AB1760 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3886E8AE2A7A36B400AB1760 /* Data+Bit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Bit.swift"; sourceTree = "<group>"; };
+		3886E8AF2A7A36B400AB1760 /* BitReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitReader.swift; sourceTree = "<group>"; };
+		3886E8B32A7A370900AB1760 /* Watermarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watermarker.swift; sourceTree = "<group>"; };
+		3886E8B52A7A393400AB1760 /* PlatformImage+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlatformImage+SwiftUI.swift"; sourceTree = "<group>"; };
+		3886E8B82A7A496C00AB1760 /* String+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Identifiable.swift"; sourceTree = "<group>"; };
+		3886E8BA2A7A7AC900AB1760 /* BitLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,9 @@
 			children = (
 				3886E89F2A7A368200AB1760 /* HiddenWatermarkDemoApp.swift */,
 				3886E8A12A7A368200AB1760 /* ContentView.swift */,
+				3886E8B32A7A370900AB1760 /* Watermarker.swift */,
+				3886E8B72A7A393E00AB1760 /* Extensions */,
+				3886E8B22A7A36B800AB1760 /* Bit */,
 				3886E8A32A7A368600AB1760 /* Assets.xcassets */,
 				3886E8A52A7A368600AB1760 /* HiddenWatermarkDemo.entitlements */,
 				3886E8A62A7A368600AB1760 /* Preview Content */,
@@ -67,6 +82,25 @@
 				3886E8A72A7A368600AB1760 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3886E8B22A7A36B800AB1760 /* Bit */ = {
+			isa = PBXGroup;
+			children = (
+				3886E8AF2A7A36B400AB1760 /* BitReader.swift */,
+				3886E8AE2A7A36B400AB1760 /* Data+Bit.swift */,
+				3886E8BA2A7A7AC900AB1760 /* BitLoader.swift */,
+			);
+			path = Bit;
+			sourceTree = "<group>";
+		};
+		3886E8B72A7A393E00AB1760 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3886E8B82A7A496C00AB1760 /* String+Identifiable.swift */,
+				3886E8B52A7A393400AB1760 /* PlatformImage+SwiftUI.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +173,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3886E8BB2A7A7AC900AB1760 /* BitLoader.swift in Sources */,
+				3886E8B12A7A36B400AB1760 /* BitReader.swift in Sources */,
+				3886E8B92A7A496C00AB1760 /* String+Identifiable.swift in Sources */,
 				3886E8A22A7A368200AB1760 /* ContentView.swift in Sources */,
+				3886E8B42A7A370900AB1760 /* Watermarker.swift in Sources */,
 				3886E8A02A7A368200AB1760 /* HiddenWatermarkDemoApp.swift in Sources */,
+				3886E8B62A7A393400AB1760 /* PlatformImage+SwiftUI.swift in Sources */,
+				3886E8B02A7A36B400AB1760 /* Data+Bit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +311,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HiddenWatermarkDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = CJ9X49H2WL;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -293,6 +333,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +350,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HiddenWatermarkDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = CJ9X49H2WL;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -331,6 +372,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
