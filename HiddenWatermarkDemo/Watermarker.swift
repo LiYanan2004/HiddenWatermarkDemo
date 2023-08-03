@@ -41,7 +41,7 @@ enum Watermarker {
         guard let wmImage = await _watermark(cgImage: image, text: text, progress: progress) else {
             return false
         }
-        let destinationURL = URL(filePath: destinationPath) as CFURL
+        let destinationURL = URL(fileURLWithPath: destinationPath) as CFURL
         if let destination = CGImageDestinationCreateWithURL(destinationURL, UTType.png.identifier as CFString, 1, nil) {
             CGImageDestinationAddImage(destination, wmImage, nil)
             CGImageDestinationFinalize(destination)
@@ -61,7 +61,7 @@ enum Watermarker {
               let wmImage = await _watermark(cgImage: cgImage, text: text, progress: progress) else {
             return false
         }
-        let destinationURL = URL(filePath: destinationPath) as CFURL
+        let destinationURL = URL(fileURLWithPath: destinationPath) as CFURL
         if let destination = CGImageDestinationCreateWithURL(destinationURL, UTType.png.identifier as CFString, 1, nil) {
             CGImageDestinationAddImage(destination, wmImage, nil)
             CGImageDestinationFinalize(destination)
